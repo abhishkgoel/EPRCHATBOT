@@ -21,7 +21,7 @@ prompt_helper = PromptHelper(max_input,tokens,max_chunk_overlap,chunk_size_limit
 llmPredictor = LLMPredictor(llm=OpenAI(temperature =0, model_name='text-ada-001',max_tokens=tokens))
 
 #load data
-docs = SimpleDirectoryReader("/home/user/app/New_folder").load_data()
+docs = SimpleDirectoryReader("Newfolder").load_data()
 
 #create vector index
 service_context = ServiceContext.from_defaults(llm_predictor=llmPredictor, prompt_helper=prompt_helper)
